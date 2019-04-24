@@ -1,7 +1,9 @@
-var centroX = 350;
-var centroY = 350;
-var MaxX = 700;
-var MaxY = 700;
+var valorReferencia = 700;
+
+var centroX = valorReferencia / 2;
+var centroY = valorReferencia / 2;
+var MaxX = valorReferencia;
+var MaxY =valorReferencia;
 var MinX = 0;
 var MinY = 0;
 
@@ -21,6 +23,8 @@ function MostrarPlanoCartesiano() {
 
     // Polo Sur 
     var cSur = document.getElementById("divCanvasSur");
+    cSur.height = valorReferencia ; 
+    cSur.width = valorReferencia ; 
     ctxSur = cSur.getContext("2d");
 
     // EJE DE ABSCISAS 
@@ -38,6 +42,8 @@ function MostrarPlanoCartesiano() {
 
     // Polo Norte 
     var cNorte = document.getElementById("divCanvasNorte");
+    cNorte.height = valorReferencia; 
+    cNorte.width = valorReferencia; 
     ctxNorte = cNorte.getContext("2d");
 
     // EJE DE ABSCISAS 
